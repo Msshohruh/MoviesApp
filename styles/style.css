@@ -1,0 +1,130 @@
+/* ===== Scrollbar CSS ===== */
+
+  /* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #0B5ED7 #ffffff;
+}
+
+  /* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #0B5ED7;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+.card{
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+}
+.card img{
+    width: 100%;
+    object-fit: cover;
+}
+.card-link{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.hover-img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.537);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #0B5ED7;
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+.card-link:hover .hover-img{
+    transform: translateY(0);
+}
+.card-link:active .hover-img{
+    color: #0b5dd798;
+}
+.movies-container{
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    overflow: auto;
+}
+form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+#input{
+    /* width: 45%; */
+    flex: 4;
+}
+#select-category {
+    /* width: 20%; */
+    flex: 2;
+}
+#select-sort{
+    /* width: 20%; */
+    flex: 2;
+}
+.bookmarks-btn {
+    /* width: 15% */
+    flex: 1;
+}
+.bookmarks{
+    width: 100%;
+}
+.bookmarks-panel{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 130px);
+    gap: 10px;
+}
+.bookmarks-item{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hidden{
+    display: none;
+}
+
+.modal{
+    width: 100%;
+    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.modal-img{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.modal-movie-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}

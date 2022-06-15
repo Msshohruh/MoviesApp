@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Movies App</title>
+</head>
+<body>
+    <header class="text-center my-3">
+        <div class="container">
+            <h1 class="display-3 text-primary">Best Movies</h1>
+            <form class="my-3" onsubmit="return false;">
+                <input type="text" class="form-control me-2" id="input" placeholder="Search..." autocomplete="off">
+                <select id="select-category" class="form-control me-2">
+                    <option value="All">All</option>
+                </select>
+                <select class="form-control me-2" id="select-sort">
+                    <option value="A-Z">Alphabet (A-Z)</option>
+                    <option value="Z-A">Alphabet (Z-A)</option>
+                    <option value="year">Year</option>
+                    <option value="rate">Rating</option>
+                </select>
+                <button class="btn bookmarks-btn btn-primary">☆ Bookmarks</button>
+            </form>
+            <div class="bookmarks form-control hidden">
+                <div class="bookmarks-panel mb-2"></div>
+                <button class="btn btn-outline-danger bookmark-remove">Remove All</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="movies-container">
+            </div>
+        </div>
+    </main>
+
+    <!-- Vertically centered scrollable modal -->
+    <div class="modal modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-main-title">About Movie</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeModal()"></button>
+            </div>
+
+            <div class="modal-body">
+                <img class="modal-img mb-2" src="" alt="">
+                <h2 class="modal-title mb-2 text-center"></h2>
+                <div class="modal-movie-info"><b>Genre:</b> <span class="genre"></span> </div>
+                <div class="modal-movie-info"><b>Year:</b> <span class="year"></span> </div>
+                <div class="modal-movie-info"><b>Language:</b> <span class="language"></span> </div>
+                <div class="modal-movie-info"><b>Runtime:</b> <span class="runtime"></span> </div>
+                <div class="w-100"><b>Summary:</b> <span class="summary"></span></div>
+            </div>
+
+          </div>
+      </div>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/movies.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
